@@ -1,0 +1,28 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular ng-change</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <p>We have your full name as '{{ main.fullName }}'.</p>
+        <p>&nbsp;</p>
+
+        <p>For confirmation please re-enter your full name:</p>
+        <p><input type="text" ng-change="main.doChange()" ng-model="main.fullNameConfirm"></p>
+
+        <hr />
+
+        <p>{{ main.message }}</p>
+    </div>
+
+
+</body>
+
+</html>
