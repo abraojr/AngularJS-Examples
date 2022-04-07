@@ -1,0 +1,22 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular ng-href and ng-src</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <p><img ng-src="{{ main.imageUrl }}" width="384" height="384"></p>
+
+        <p><a ng-href="{{ main.linkUrl }}" target="_blank">Go to AngularJS</a></p>
+    </div>
+
+
+</body>
+
+</html>
