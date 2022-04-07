@@ -1,0 +1,28 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular ng-bind and ng-bind-template</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+        <p>{{ main.standardBind }}</p>
+        <p ng-bind="main.standardBind"></p>
+
+        <p>&nbsp;</p>
+
+        <p>{{ main.firstTemplateBinding }} and {{ main.secondTemplateBinding }}</p>
+        <p ng-bind-template="{{ main.firstTemplateBinding }} and {{ main.secondTemplateBinding }}"></p>
+
+        <p>&nbsp;</p>
+
+        <p ng-non-bindable>{{ main.nonBindable }}</p>
+    </div>
+
+</body>
+
+</html>
