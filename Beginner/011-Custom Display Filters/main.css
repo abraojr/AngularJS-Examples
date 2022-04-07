@@ -1,0 +1,8 @@
+div {
+  float: left;
+  padding-top: 100px;
+  padding: 50px;
+  margin: 10px 20px;
+  width: 50%;
+  border: solid 6px black;
+}

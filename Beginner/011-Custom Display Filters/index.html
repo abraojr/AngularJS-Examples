@@ -1,0 +1,20 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular Custom Display Filters</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+        <p>Name: {{ main.user.name | capitalize }}</p>
+        <p>Account Type: {{ main.user.accountType | capitalize }}</p>
+        <p>Balance: {{ main.user.balance | currency:'USD $':0 }}</p>
+    </div>
+
+</body>
+
+</html>
