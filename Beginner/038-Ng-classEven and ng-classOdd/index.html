@@ -1,0 +1,34 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular ng-class-even and ng-class-odd</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+        .even {
+            background-color: #aaeeee;
+        }
+
+        .odd {
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <table>
+            <tr ng-repeat="item in main.foodList" ng-class-even="'even'" ng-class-odd="'odd'">
+                <td>{{ item.name }}</td>
+                <td>{{ item.price | currency }}</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
