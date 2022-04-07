@@ -1,0 +1,31 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular ng-mouseenter and ng-mouseleave</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <div class="test-div" ng-mouseenter="main.doMouseEnter($event)" ng-mouseleave="main.doMouseLeave($event)"
+            ng-mouseover="main.doMouseOver($event)">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <hr />
+
+        <p>Mouse enter count: {{ main.mouseEnterCount }}</p>
+        <p>Mouse leave count: {{ main.mouseLeaveCount }}</p>
+        <p>Mouse over count: {{ main.mouseOverCount }}</p>
+    </div>
+
+</body>
+
+</html>
