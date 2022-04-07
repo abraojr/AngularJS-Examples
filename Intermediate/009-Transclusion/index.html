@@ -1,0 +1,20 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Transclusion</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <tst-user-view item="main.user">
+            <p>This content exists in the main controller scope. {{main.helloMessage}}</p>
+        </tst-user-view>
+    </div>
+</body>
+
+</html>
