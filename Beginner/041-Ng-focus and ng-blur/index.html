@@ -1,0 +1,27 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular ng-focus and ng-blur</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+        <p>Enter your name:</p>
+
+        <p>
+            <input type="text" autofocus ng-model="main.user.name" ng-focus="main.sayHello()"
+                ng-blur="main.sayGoodbye()">
+        </p>
+
+        <hr />
+
+        <p>{{ main.message }}</p>
+    </div>
+
+</body>
+
+</html>
