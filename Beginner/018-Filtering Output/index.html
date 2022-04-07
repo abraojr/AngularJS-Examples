@@ -1,0 +1,39 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular Filtering Output</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <p>Select a food group:</p>
+        <p>
+            <select ng-model="main.selectedType.type">
+                <option value="">All</option>
+                <option value="dairy">Dairy</option>
+                <option value="fruits">Fruits</option>
+                <option value="grains">Grains</option>
+                <option value="meats">Meats</option>
+                <option value="other">Other</option>
+                <option value="vegetables">Vegetables</option>
+            </select>
+        </p>
+
+        <hr />
+
+        <ul>
+            <li ng-repeat="item in main.items | filter: main.selectedType">
+                {{ item.name }} ({{ item.type }})
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
