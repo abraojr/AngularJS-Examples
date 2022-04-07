@@ -1,0 +1,27 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS ng-list</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <p>Edit names:</p>
+        <p><input type="text" ng-list="|" ng-model="main.names"></p>
+
+        <hr />
+
+        <p>Binding to names: {{main.names}}</p>
+
+        <p>Type of name is: {{main.getType(main.names)}}</p>
+
+        <p>First name in array: {{main.names[0]}}</p>
+    </div>
+</body>
+
+</html>
