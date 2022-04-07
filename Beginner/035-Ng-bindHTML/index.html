@@ -1,0 +1,36 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular ng-bind-html</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <p>{{ main.htmlData }}</p>
+
+        <p>{{ main.dangerousScript }}</p>
+
+        <p>{{ main.dangerousCSS }}</p>
+
+        <hr />
+
+        <p ng-bind-html="main.htmlData"></p>
+
+        <p ng-bind-html="main.dangerousScript"></p>
+
+        <p ng-bind-html="main.dangerousCSS"></p>
+
+        <p ng-bind-html="main.trustedCSS"></p>
+    </div>
+
+
+</body>
+
+
+</html>
