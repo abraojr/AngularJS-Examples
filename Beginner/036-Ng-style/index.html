@@ -1,0 +1,25 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular ng-style</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <p ng-style="main.style1">This is the first style.</p>
+        <p ng-style="main.style2">This is the second style.</p>
+
+        <hr />
+
+        <button ng-click="main.enableStyles()">Enable Styles</button>
+        <button ng-click="main.disableStyles()">Disable Styles</button>
+    </div>
+
+</body>
+
+</html>
