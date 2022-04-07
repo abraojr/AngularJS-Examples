@@ -1,0 +1,25 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular ng-include</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+        <p>Select the view:
+            <select ng-model="main.viewType">
+                <option value="partials/cars-short.html">Short</option>
+                <option value="partials/cars-long.html">Long</option>
+            </select>
+        </p>
+
+        <div ng-include src="main.viewType"></div>
+    </div>
+
+</body>
+
+</html>
