@@ -1,0 +1,36 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular ng-class</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+        .redClass {
+            color: red;
+        }
+
+        .greenClass {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <p ng-class="main.class1">This is the first class</p>
+        <p class="ng-class:main.class2">This is the second class</p>
+
+        <hr />
+
+        <p ng-class="{'redClass':main.isSelected, 'greenClass':!main.isSelected}">Changes based on selection</p>
+
+        <p>Is Selected ?<input type="checkbox" ng-model="main.isSelected"></p>
+    </div>
+
+</body>
+
+</html>
