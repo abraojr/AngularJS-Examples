@@ -1,0 +1,27 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Two way binding</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController">
+
+        <span tst-vehicle-view item="firstItem"></span>
+
+        <tst-vehicle-view item="secondItem"></tst-vehicle-view>
+
+        <p>First item price:</p>
+        <p><input type="text" ng-model="firstItem.price"></p>
+
+        <p>Second item price:</p>
+        <p><input type="text" ng-model="secondItem.price"></p>
+
+    </div>
+</body>
+
+</html>
