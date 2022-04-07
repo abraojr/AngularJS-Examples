@@ -1,0 +1,23 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular Iterators</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <ul>
+            <li ng-repeat="sentence in main.greetingSentences">
+                {{ sentence }}
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
