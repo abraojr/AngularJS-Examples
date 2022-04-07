@@ -1,0 +1,49 @@
+form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+p {
+  margin: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.user-form tr > td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+.user-form tr > td:first-child {
+  text-align: right;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input.ng-dirty.ng-valid {
+  background: #ddffdd;
+}
+
+input.ng-dirty.ng-invalid {
+  background: #ffdddd;
+}

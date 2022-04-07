@@ -1,0 +1,50 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular Form Validation</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <form name="userForm" novalidate>
+            <table class="user-form">
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" ng-model="main.user.firstName" required></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" ng-model="main.user.lastName" required></td>
+                </tr>
+                <tr>
+                    <td>Phone (10 digits):</td>
+                    <td><input type="text" ng-model="main.user.phone" required ng-minlength="10"></td>
+                </tr>
+                <tr>
+                    <td>Email Address:</td>
+                    <td><input type="email" ng-model="main.user.email" required></td>
+                </tr>
+                <tr>
+                    <td>Zip Code:</td>
+                    <td><input type="text" ng-model="main.user.zip" required ng-pattern="/^\d{5}-?\d{3}$/"></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><button ng-click="main.submitForm(userForm)">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+
+        <p>
+            {{main.user}}
+        </p>
+    </div>
+
+</body>
+
+</html>
