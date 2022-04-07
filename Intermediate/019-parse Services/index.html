@@ -1,0 +1,23 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Parse</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <button ng-click="main.executeMultiply()">Execute Multiply</button>
+
+        <p>Multiply Operation Output: {{ main.results }}</p>
+
+        <p>Selected Id: {{ main.idOfPart }}</p>
+
+    </div>
+</body>
+
+</html>
