@@ -1,0 +1,35 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular Controllers and Variable Scope</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+
+    <div ng-controller="ParentController">
+        <input type="text" ng-model="model.name">
+        <p>This is the parent: {{ model.name }}</p>
+
+        <div ng-controller="ChildController">
+            <input type="text" ng-model="model.name">
+            <p>This is the child: {{ model.name }}</p>
+        </div>
+
+    </div>
+
+    <div ng-controller="ParentController">
+        <input type="text" ng-model="model.name">
+        <p>This is the second parent: {{ model.name }}</p>
+    </div>
+
+    <div ng-controller="IndieController">
+        <input type="text" ng-model="model.name">
+        <p>This is the indie controller: {{ model.name }}</p>
+    </div>
+
+</body>
+
+
+</html>
