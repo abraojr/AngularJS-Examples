@@ -1,0 +1,20 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Locale</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-i18n/angular-locale_en.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <p>The current date in the current language is {{ main.date | date:formattedDate}}</p>
+        <p>Cost per year {{main.cost | currency}}</p>
+    </div>
+</body>
+
+</html>
