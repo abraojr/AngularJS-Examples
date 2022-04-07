@@ -1,0 +1,27 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular Data Types</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <p>Data: {{ main.data }}</p>
+
+        <hr />
+
+        <ul>
+            <li ng-repeat="result in main.results">
+                {{ result }}
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
