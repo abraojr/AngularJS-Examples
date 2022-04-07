@@ -1,0 +1,22 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular Number and JSON Filters</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+        {{ 121213123.0789349 | number: 2 }}
+    </div>
+
+    <div ng-controller="MainController as main">
+        {{ main.user | json}}
+    </div>
+
+</body>
+
+</html>
