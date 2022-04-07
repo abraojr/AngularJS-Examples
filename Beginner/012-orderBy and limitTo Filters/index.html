@@ -1,0 +1,23 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular orderBy and limitTo Filters</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+        <ul ng-repeat="user in main.users | orderBy:'balance' | limitTo:2:1">
+            <li>Name: {{ user.firstName + ' ' + user.lastName }}</li>
+            <li>Account: {{ user.accountType }}</li>
+            <li>Balance: {{ user.balance }}</li>
+            <li>Birthday: {{ user.birthday }}</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
