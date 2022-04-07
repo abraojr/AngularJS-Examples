@@ -1,0 +1,22 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Angular Date Filters</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+        <p>Now: {{ main.now | date:'short' }}</p>
+
+        <p>User: {{ main.user.name }}</p>
+        <p>Birthday: {{ main.user.birthday | date:'dd/MM/yyyy' }}</p>
+        <p>User: {{ main.user.lastLogin | date:'shortDate' }}</p>
+    </div>
+
+</body>
+
+</html>
