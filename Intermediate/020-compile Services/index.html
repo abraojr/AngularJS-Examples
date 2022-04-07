@@ -1,0 +1,31 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Compile</title>
+    <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <p>Enter field label:</p>
+        <p><input type="text" ng-model="main.fieldLabel"></p>
+
+        <p>Enter HTML for new input field:</p>
+        <p><textarea id="htmlInput" ng-model="main.htmlMarkup"></textarea></p>
+
+        <p><button ng-click="main.addNewField(main.htmlMarkup)">Add New Field</button></p>
+
+        <hr />
+
+        <div id="myDiv">
+            <p>Placeholder Container:</p>
+        </div>
+    </div>
+</body>
+
+</html>
