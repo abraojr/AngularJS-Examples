@@ -1,0 +1,27 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Replacing View</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div>
+        <a ng-href="#!/welcome">Welcome</a> |
+        <a ng-href="#!/about">About Us</a>
+    </div>
+
+    <div ng-controller="NavController as nav">
+        <button ng-click="nav.goto('/welcome')">Welcome</button> |
+        <button ng-click="nav.goto('/about')">About Us</button>
+    </div>
+
+    <ng-view></ng-view>
+
+</body>
+
+</html>
