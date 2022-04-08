@@ -1,0 +1,24 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS GET </title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <button ng-click="main.model.getStates()">Get States</button>
+
+        <ul>
+            <li ng-repeat="state in main.model.states">
+                {{state.name}} ({{state.abbreviation}})
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
