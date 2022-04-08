@@ -1,0 +1,23 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Route Parameters</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div>
+        <a ng-href="#!/welcome">Welcome</a> |
+        <a ng-href="#!/product/1">Show product 1</a> |
+        <a ng-href="#!/product/2">Show product 2</a>
+    </div>
+
+    <ng-view></ng-view>
+
+</body>
+
+</html>
