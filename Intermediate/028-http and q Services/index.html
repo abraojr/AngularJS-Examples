@@ -1,0 +1,35 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS HTTP and q Services</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <h3>Get a state:</h3>
+        <p>
+            Abbreviation: <input type="text" ng-model="main.abbreviation">
+            <button ng-click="main.getState(main.abbreviation)">Get one state</button>
+        </p>
+
+        <hr />
+
+        <p><button ng-click="main.getSomeStates()">Get a few states</button></p>
+        <p><button ng-click="main.getSomeStatesAtOnce()">Get a few states with $q.all</button></p>
+
+        <hr />
+
+        <ul>
+            <li ng-repeat="state in main.states">
+                {{state.name}} ({{state.abbreviation}})
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
