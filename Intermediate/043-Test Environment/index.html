@@ -1,0 +1,23 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS q Services</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-mocks/angular-mocks.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <p><button ng-click="main.getData()">Get data</button></p>
+        <hr />
+        <p>Data:</p>
+        <p>{{main.data}}</p>
+    </div>
+
+</body>
+
+</html>
