@@ -1,0 +1,22 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Query Strings</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div>
+        <a href="#!/welcome?firstName=David&lastName=Smith">Query String Params #1</a>
+        <a href="#!/welcome?userId=5437645fjjfi434-dsd3434-dsd">Query String Params #2</a>
+    </div>
+
+    <ng-view></ng-view>
+
+</body>
+
+</html>
