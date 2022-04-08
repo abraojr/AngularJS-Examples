@@ -1,0 +1,24 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Log Services</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+        <p><button ng-click="main.logClicked('This is log data.')">Log</button></p>
+        <p><button ng-click="main.infoClicked('This is info data.')">Info</button></p>
+        <p><button ng-click="main.warnClicked('This is warn data.')">Warn</button></p>
+        <p><button ng-click="main.errorClicked('This is error data.')">Error</button></p>
+        <p><button ng-click="main.debugClicked('This is debug data.')">Debug</button></p>
+    </div>
+
+
+</body>
+
+</html>
