@@ -1,0 +1,27 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS POST </title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <p>Name: <input type="text" ng-model="main.name"></p>
+        <button ng-click="main.model.addUser()">Add</button>
+
+        <hr />
+
+        <ul>
+            <li ng-repeat="user in main.model.users">
+                {{user.name}} ({{user.id}})
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
