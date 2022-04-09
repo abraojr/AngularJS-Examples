@@ -1,0 +1,31 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Testing Services</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-mocks/angular-mocks.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <p>Value1: <input type="text" ng-model="main.value1"></p>
+        <p>Value2: <input type="text" ng-model="main.value2"></p>
+
+        <p>
+            <button ng-click="main.add(main.value1,main.value2)">Add</button>
+            <button ng-click="main.subtract(main.value1,main.value2)">Subtract</button>
+            <button ng-click="main.divide(main.value1,main.value2)">Divide</button>
+            <button ng-click="main.multiply(main.value1,main.value2)">Multiply</button>
+        </p>
+
+        <hr />
+        <p ng-show="main.result !== undefined">Result: {{main.result}}</p>
+    </div>
+
+</body>
+
+</html>
