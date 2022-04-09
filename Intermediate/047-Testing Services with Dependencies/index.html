@@ -1,0 +1,24 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Testing Services with Dependencies</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-mocks/angular-mocks.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+
+        <p><button ng-click="main.getName()">Get Random Name</button></p>
+
+        <hr />
+        <p>Result: {{main.name}}</p>
+    </div>
+
+</body>
+
+</html>
