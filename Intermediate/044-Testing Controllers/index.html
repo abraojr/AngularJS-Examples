@@ -1,0 +1,28 @@
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Testing Controllers</title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular-mocks/angular-mocks.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div ng-controller="MainController as main">
+
+        <h1>Enter a number to get it's value squared:</h1>
+        <p>
+            <input type="text" ng-model="main._inputValue">
+            <button ng-click="main.calculateSquare(main._inputValue)">Calculate</button>
+        </p>
+
+        <hr />
+
+        <p ng-show="main.inputValue !== null">The square of {{main.inputValue}} is {{main.result}}</p>
+    </div>
+
+</body>
+
+</html>
